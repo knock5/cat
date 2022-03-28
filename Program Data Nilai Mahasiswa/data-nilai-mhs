@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class UtsMif {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n;
+        String[] nama, index_nilai;
+        int[] NilUjian;
+
+        System.out.println("Masukkan jumlah mahasiswa : ");
+        n = sc.nextInt();
+
+        // Memasukkan kedalam indeks Array
+        nama = new String[n];
+        index_nilai = new String[n];
+        NilUjian = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.println("Mahasiswa ke-" + (i+1));
+            System.out.print("Nama : ");
+            nama[i] = sc.next();
+
+            System.out.print("Nilai : ");
+            NilUjian[i] = sc.nextInt();
+
+            if (NilUjian[i] >= 80) {
+                index_nilai[i] = "A";
+            } else if (70 <= NilUjian[i] && NilUjian[i] < 80) {
+                index_nilai[i] = "B";
+            } else if (55 <= NilUjian[i] && NilUjian[i] < 70) {
+                index_nilai[i] = "C";
+            } else if (45 <= NilUjian[i] && NilUjian[i] < 55) {
+                index_nilai[i] = "D";
+            } else if (NilUjian[i] < 45) {
+                index_nilai[i] = "E";
+            } else {
+                System.out.println("Tidak Lulus");
+            }
+        }
+
+        // Tampilan data
+        System.out.println("==========================================================================");
+        System.out.println("\t\t\tDATA NILAI MAHASISWA\t\t\t");
+        System.out.println("==========================================================================");
+        System.out.println("No.\tNama\tNilai\tIndeks");
+
+        for (int i = 0; i < n; i++) {
+            System.out.println((i + 1) + "\t" + nama[i] + "\t" + NilUjian[i] + "\t" + index_nilai[i]);
+        }
+    }
+    
+}
