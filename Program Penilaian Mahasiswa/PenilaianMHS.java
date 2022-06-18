@@ -152,6 +152,7 @@ public class PenilaianMHS {
         if (menu == 3) {
             System.out.println();
             System.out.println("Program Selesai!");
+            System.out.println("Terima Kasih");
             System.out.println();
             running = false;
         }
