@@ -143,6 +143,7 @@ public class PenilaianMHS {
             System.out.println("Nilai Tugas : " + nilai_tugas[i]);
             System.out.println("Nilai UTS : " + nilai_uts[i]);
             System.out.println("Nilai UAS : " + nilai_uas[i]);
+            System.out.println("Nilai Akhir : " + nilai_akhir[i]);
             System.out.println("Nilai Huruf : " + index_nilai[i]);
             System.out.println();
         }
